@@ -17,3 +17,5 @@ Instalar bibliotecas necessárias. O projeto é só para back-end
 Adicionar "dev": "nodemon index.js" no arquivo package.json
 
 Para rodar o projeto, basta digitar: npm run dev ou "start": npm start
+
+"start": "npx nodemon index.js",
