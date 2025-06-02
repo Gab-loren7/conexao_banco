@@ -1,0 +1,60 @@
+// Código para criar a tabela no PgAdmin
+
+CREATE TABLE client (
+  cpf VARCHAR(11) PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  idade INTEGER,
+  profissao VARCHAR(50)
+);
+
+---------------------------------------------------------------------------
+
+// Arquivo .env
+
+PORT = '3000'
+USER_NAME = 'postgres'
+HOST_NAME = 'localhost'
+DB_NAME = '****'
+DB_PASSWORD = '****'
+DB_DIALECT = 'postgres'
+PORT_NUMBER = '****'
+
+---------------------------------------------------------------------------
+
+Teste da rota POST:
+- Usei postman
+- Selecionei POST
+- URL: htpp://localhost:3000/client
+- BODY -> RAW:
+{
+  "cpf": "12345678901",
+  "nome": "João da Silva",
+  "email": "joao.silva@example.com",
+  "idade": 30,
+  "profissao": "Engenheiro"
+}
+
+
+- HEADER -> KEY: Content-Type 
+- HEADER -> Value: application/json
+
+----------------------------------------------------------------------------
+
+Teste da rota PACTH:
+- Usei postman
+- Selecionei PACTH
+- URL: http://localhost:3000/clientes/3
+- BODY -> RAW:
+{
+    "nome": "João",
+    "idade": 34,
+    "uf": "CE"
+}
+
+----------------------------------------------------------------------------
+
+Teste da rota DELETE:
+- Usei postman
+- Selecionei DELETE
+- URL: http://localhost:3000/clientes/id_do_cliente
