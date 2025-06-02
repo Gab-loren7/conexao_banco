@@ -71,14 +71,11 @@ async function insertCustomer(customer) {
 
 // Função assíncrona para deletar cliente por CPF
 async function deleteCustomer(cpf) {
-
   // Conecta ao banco de dados usando a função "connect" definida anteriormente
   const client = await connect();
-
   // Cria a query SQL para deletar um cliente com base no CPF fornecido
   // O "$1" é um placeholder para prevenir SQL Injection
   const sql = "DELETE FROM client WHERE cpf = $1";
-
   // Executa a query no banco de dados, passando o CPF como valor para o placeholder "$1"
   // Isso remove o cliente que tiver esse CPF
   await client.query(sql, [cpf]);
