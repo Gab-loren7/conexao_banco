@@ -25,7 +25,7 @@ PORT_NUMBER = '****'
 Teste da rota POST:
 - Usei postman
 - Selecionei POST
-- URL: htpp://localhost:3000/client
+- URL: http://localhost:3000/client
 - BODY -> RAW:
 {
   "cpf": "12345678901",
@@ -44,7 +44,7 @@ Teste da rota POST:
 Teste da rota PACTH:
 - Usei postman
 - Selecionei PACTH
-- URL: http://localhost:3000/clientes/3
+- URL: http://localhost:3000/client/id_do_cliente
 - BODY -> RAW:
 {
     "nome": "João",
@@ -57,4 +57,6 @@ Teste da rota PACTH:
 Teste da rota DELETE:
 - Usei postman
 - Selecionei DELETE
-- URL: http://localhost:3000/clientes/id_do_cliente
+- URL: http://localhost:3000/client/id_do_cliente
+
+5432
