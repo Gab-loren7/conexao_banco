@@ -1,5 +1,7 @@
 // Código para criar a tabela no PgAdmin
 
+NÃO ESQUEÇA DE DAR NPM START !!!
+
 CREATE TABLE client (
   cpf VARCHAR(11) PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
@@ -58,5 +60,3 @@ Teste da rota DELETE:
 - Usei postman
 - Selecionei DELETE
 - URL: http://localhost:3000/client/id_do_cliente
-
-5432
